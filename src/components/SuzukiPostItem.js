@@ -1,4 +1,3 @@
-// src/components/SuzukiPostItem.js
 import React, { useMemo } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { heavyComputation } from '../utils/heavyComputation';

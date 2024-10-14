@@ -1,22 +1,28 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import axios from 'axios';
+import { fetchPostDetails } from '../utils/api';
 
-const SuzukiPostDetails = ({ postId }) => {
+const SuzukiPostDetails = ({ route }) => {
+  const { postId } = route.params;
   const [postDetails, setPostDetails] = useState(null);
-  const [error, setError] = useState(null); 
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchPostDetails = async () => {
-      try {
-        const response = await axios.get(`https://jsonplaceholder.typicode.com/posts/${postId}`);
-        setPostDetails(response.data);
-      } catch (err) {
+    const loadPostDetails = async () => {
+      const details = await fetchPostDetails(postId);
+      if (details) {
+        setPostDetails(details);
+      } else {
         setError('Failed to load post details');
       }
     };
 
-    fetchPostDetails();
+    loadPostDetails();
+  }, [postId]);
+
+  
+  useEffect(() => {
+    console.log('SuzukiPostDetails component re-rendered due to prop change (postId)', postId);
   }, [postId]);
 
   return (
@@ -24,7 +30,11 @@ const SuzukiPostDetails = ({ postId }) => {
       {error ? (
         <Text style={styles.error}>{error}</Text>
       ) : postDetails ? (
-        <Text>{postDetails.title}</Text>
+                  <>
+                   <Text style={styles.id}>ID: {postDetails.id}</Text>
+        <Text style={styles.title}>Title: {postDetails.title}</Text>
+        <Text style={styles.body}>Body: {postDetails.body}</Text>
+       </>
       ) : (
         <Text>Loading details...</Text>
       )}
@@ -41,3 +51,5 @@ const styles = StyleSheet.create({
     color: 'red',
   },
 });
+
+export default SuzukiPostDetails;

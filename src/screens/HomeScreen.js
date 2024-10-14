@@ -4,13 +4,14 @@ import Toast from 'react-native-toast-message';
 import SuzukiCounter from '../components/SuzukiCounter';
 import SuzukiPostItem from '../components/SuzukiPostItem';
 import { fetchPosts } from '../utils/api';
+import { useNavigation } from '@react-navigation/native'; 
 
 const HomeScreen = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [page, setPage] = useState(1);
   const [isFetchingMore, setIsFetchingMore] = useState(false);
-
+  const navigation = useNavigation(); 
 
   useEffect(() => {
     const fetchData = async () => {
@@ -51,9 +52,9 @@ const HomeScreen = () => {
     }
   };
 
-  const onItemPress = useCallback((id) => {
-    console.log('Post ID clicked:', id);
-  }, []);
+   const onItemPress = useCallback((id) => {
+    navigation.navigate('SuzukiPostDetails', { postId: id }); 
+  }, [navigation]);
 
   return (
     <View style={styles.screen}>

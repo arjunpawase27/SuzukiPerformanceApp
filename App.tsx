@@ -1,12 +1,12 @@
 import React from 'react';
 import { SafeAreaView, StyleSheet } from 'react-native';
-import HomeScreen from './src/screens/HomeScreen';
+import AppNavigator from './src/navigation/AppNavigator';
 import Toast from 'react-native-toast-message';
 
 const App = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <HomeScreen />
+      <AppNavigator />
       <Toast ref={(ref) => Toast.setRef(ref)} />
     </SafeAreaView>
   );
