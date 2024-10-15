@@ -77,3 +77,14 @@ To learn more about React Native, take a look at the following resources:
 - [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
 - [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
 - [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+- Application Overview
+- ![Simulator Screenshot - iPhone 15 Pro - 2024-10-15 at 13 13 05](https://github.com/user-attachments/assets/c93006e3-736e-40fc-960f-c19732f5e2b9)
+- ![Simulator Screenshot - iPhone 15 Pro - 2024-10-15 at 13 15 45](https://github.com/user-attachments/assets/516d715c-3d4d-4f46-9821-a51a1dbd785e)
+- ![Simulator Screenshot - iPhone 15 Pro - 2024-10-15 at 13 16 10](https://github.com/user-attachments/assets/456950b5-a2d0-4d9c-a700-ef15f5f05278)
+- ![Simulator Screenshot - iPhone 15 Pro - 2024-10-15 at 13 16 25](https://github.com/user-attachments/assets/b8bb028f-305e-41e4-9741-49b2916ddfb7)
+- ![Simulator Screenshot - iPhone 15 Pro - 2024-10-15 at 13 16 33](https://github.com/user-attachments/assets/e79c4313-c372-40f2-ae4a-a76d237839ca)
+
+
+
+
+
